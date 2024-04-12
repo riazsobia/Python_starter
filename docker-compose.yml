@@ -1,0 +1,12 @@
+version: "3"
+services:
+  flask_boilerplate:
+    build: .
+    image: "flask_boilerplate"
+    container_name: "flask_boilerplate"
+    environment:
+      AUTHENTICATION_USERNAME: ${AUTHENTICATION_USERNAME}
+      AUTHENTICATION_PASSWORD: ${AUTHENTICATION_PASSWORD}
+
+    ports:
+      - "${APP_PORT}:5001"
